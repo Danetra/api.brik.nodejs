@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "1981b3cb-d34a-42e7-90a9-60d86d5127ba",
+		"name": "BRIK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21736836",
+		"_collection_link": "https://red-eclipse-80450.postman.co/workspace/TEST-CODE~20d17e3a-f74d-4b08-89ba-2d32b7407cd5/collection/21736836-1981b3cb-d34a-42e7-90a9-60d86d5127ba?action=share&source=collection_link&creator=21736836"
+	},
+	"item": [
+		{
+			"name": "HOME",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2023/api/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2023",
+					"path": [
+						"api",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2023/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2023",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Alex\",\r\n    \"lastName\": \"Al Munjabi\",\r\n    \"namaToko\": \"Jabi Shop\",\r\n    \"noTelp\": \"081287987023\",\r\n    \"email\": \"alex@gmail.com\",\r\n    \"password\": \"alex123\",\r\n    \"confirmPassword\": \"alex123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2023/api/v1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2023",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DETAIL PRODUCTS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYW1hRGVwYW4iOiJRV1J0YVc1cGMzUnlZWFJ2Y2c9PSIsImlhdCI6MTY5NDYxOTgxNSwiZXhwIjoxNjk0NjI3MDE1fQ.cor-SQfOGnlOmyxG_KKq7v4MJ85zkf0vi10nZh4_57w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2023/api/v1/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2023",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST PRODUCTS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYW1hRGVwYW4iOiJRV1J0YVc1cGMzUnlZWFJ2Y2c9PSIsImlhdCI6MTY5NDYxOTgxNSwiZXhwIjoxNjk0NjI3MDE1fQ.cor-SQfOGnlOmyxG_KKq7v4MJ85zkf0vi10nZh4_57w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2023/api/v1/list-product?page=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2023",
+					"path": [
+						"api",
+						"v1",
+						"list-product"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST PRODUCTS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYW1hRGVwYW4iOiJRV1J0YVc1cGMzUnlZWFJ2Y2c9PSIsImlhdCI6MTY5NDYyNjc2NywiZXhwIjoxNjk0NjMzOTY3fQ.KL-p4yscCQPcei35F94k5zD4Z76XiH3o1zZKUCe29_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"CategoryId\": 2,\r\n    \"name\": \"Mentega Blue Band\",\r\n    \"description\": \"Mentega yang dapat diminum\",\r\n    \"weight\": 500,\r\n    \"width\": 5,\r\n    \"length\": 5,\r\n    \"height\": 5,\r\n    \"price\": 30000,\r\n    \"image\": \"https://cf.shopee.co.id/file/7cb930d1bd183a435f4fb3e5cc4a896b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2023/api/v1/post-product/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2023",
+					"path": [
+						"api",
+						"v1",
+						"post-product",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
